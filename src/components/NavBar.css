@@ -1,0 +1,88 @@
+/* NavBar.css */
+
+.navbar {
+  background: linear-gradient(90deg, #1f1c2c, #928dab); /* Dark elegant gradient */
+  color: white;
+  padding: 18px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: #f1c40f; /* Gold tone */
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.navbar ul li a:hover {
+  background: #f39c12;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  transform: translateY(-2px);
+}
+
+.navbar ul li a:active {
+  background-color: #d35400;
+  transform: scale(0.98);
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar h2 {
+    margin-bottom: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+  }
+}

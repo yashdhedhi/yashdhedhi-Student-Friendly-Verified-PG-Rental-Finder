@@ -1,0 +1,94 @@
+/* Favorites.css */
+
+.favorites-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.favorites-container h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.loading,
+.empty {
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-item {
+  background-color: #f8f9fa;
+  padding: 12px 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.favorite-item:hover {
+  background-color: #eef1f5;
+  transform: translateY(-2px);
+}
+
+.remove-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .favorites-container {
+    margin: 40px 16px;
+    padding: 30px 20px;
+  }
+
+  .favorite-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .remove-button {
+    width: 100%;
+  }
+}
